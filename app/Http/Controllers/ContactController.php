@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Mail\ContactSendMail;
 
-class CotactController extends Controller
+class ContactController extends Controller
 {
     public function index()
     {
@@ -21,7 +21,7 @@ class CotactController extends Controller
                 return redirect()->route('index');
             }
             $request->validate([
-            'name' => 'required',
+                'name' => 'required',
                 'cname' => 'required',
                 'tel' => ['required', 'numeric', 'digits_between:8,11'],
                 'email' => ['required','email','confirmed'],

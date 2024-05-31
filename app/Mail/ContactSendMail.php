@@ -39,7 +39,7 @@ class ContactSendMail extends Mailable
     {
         return $this
         ->subject('お問い合わせありがとうございます')
-        ->view('emails.urer')
+        ->view('emails.user')
         ->with([
             'name' => $this->name,
             'cname' => $this->cname,

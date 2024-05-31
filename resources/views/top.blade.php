@@ -5,7 +5,7 @@
         <div class="form-cont">
             <div class="mg-b_40">
                 <label for="name" class="required-tag">担当者名</label><br>
-                <input type="text" placeholder="山田太郎" id="name" name="name" value={{ old('name') }}>
+                <input type="text" placeholder="山田太郎" id="name" name="name" value="{{ old('name') }}">
                 @if($errors->has('name'))
                   <p class="required">{{$errors->first('name')}}</p>
                 @endif
@@ -26,7 +26,7 @@
             </div>
             <div class="mg-b_40">
                 <label for="email" class="required-tag">メールアドレス</label><br>
-                <input type="email" placeholder="sample@example.com" id="mail" name="email"  class="mg-b_10" value="{{ old('email') }}">
+                <input type="email" placeholder="sample@example.com" id="mail" name="email"  class="mg-b_10" value="{{ old('email') }}"><br>
                 <input type="email" placeholder="確認のため再度入力してください" id="mail" name="email_confirmation">
                 @if($errors->has('mail'))
                  <p class="required">{{ $errors->first(email1) }}</p>
@@ -37,7 +37,7 @@
             </div>
             <div class="mg-b_40">
                 <label for="content" class="lg-label">お問い合わせ内容</label><br>
-                <textarea name="content" id="content" cols="30" rows="10" placeholder="Message">{{ old('content') }}</texterea>
+                <textarea name="content" id="content" cols="30" rows="10" placeholder="Message">{{ old('content') }}</textarea>
             </div>
        </div>
     </div>
